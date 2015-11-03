@@ -10,6 +10,7 @@
 #include "Log.h"
 #include "Enums.h"
 #include "Shader.h"
+#include "Global.h"
 
 using namespace std;
 
@@ -128,6 +129,8 @@ bool Effect::Build(const string& resourceName)
         }
         
 	}
+    
+    Global::InitializeUniformMap(Handle);
 
 	return true;
 }

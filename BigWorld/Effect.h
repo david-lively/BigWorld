@@ -8,7 +8,7 @@
 #include "Resource.h"
 #include "Shader.h"
 #include "VertexArray.h"
-#include "GlobalState.h"
+#include "Global.h"
 
 /// 
 class Effect : public Resource
@@ -48,6 +48,7 @@ public:
 
 	virtual void SetUniforms(const GameTime&)
 	{
+        Global::ApplyAll();
 
 	}
 

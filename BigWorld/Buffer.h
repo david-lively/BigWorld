@@ -105,11 +105,11 @@ public:
 	{
         return m_data.size();
 	}
+    
     /// data
-    const std::vector<T>& Data() const
+    std::vector<T>& Data()
     {
         return m_data;
-    
     }
 
 private:
