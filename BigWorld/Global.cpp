@@ -31,7 +31,6 @@ GLint GetUniformLocation(GLint program, const string& name)
 }
 
 
-
 void Global::InitializeUniformMap(GLuint program)
 {
     m_uniformLocations[program].clear();
@@ -85,7 +84,7 @@ void Global::InitializeUniformMap(GLuint program)
         
         m_uniformLocations[program][string(nameBuffer)] = location;
         
-        Log::Info << "Found shader uniform \"" << nameBuffer << "\"\n";
+        Log::Info << "Found shader uniform " << location << " \"" << nameBuffer << "\"\n";
     }
 
     check_gl_error();
@@ -143,6 +142,21 @@ int Global::ApplyAll()
         return 0;
     }
     
+    {
+        auto it = m_uniformLocations.find(programId);
+    
+        if (it == end(m_uniformLocations))
+            InitializeUniformMap(programId);
+    }
+    
+    
+    auto& uniforms = m_uniformLocations[programId];
+    
+    for(auto it = begin(uniforms); it != end(uniforms); ++it)
+    {
+        
+        
+    }
     
     
     return -1;

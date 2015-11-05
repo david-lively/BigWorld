@@ -11,10 +11,8 @@ out vec4 vColor;
 
 void main()
 {
-	//vPosition = Projection * View * World * vec4(Position,1);
-//    vPosition.z = 0.9f;
     vPosition = vec4(Position, 1);
     vColor = Color;
-	gl_Position = vPosition;
+    gl_Position = Projection * View * World * vec4(Position,1);
 }
 

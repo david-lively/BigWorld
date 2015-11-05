@@ -43,6 +43,8 @@ void MenuScreen::CreateScene()
     m_effect->Rebuild();
     
     m_effect->Bind();
+    
+    Global::InitializeUniformMap(m_effect->Handle);
 
 	mesh.SetData(vertices, indices);
 

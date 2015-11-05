@@ -21,16 +21,9 @@ namespace Log
     const int NoHeader = 0x01;
     
     
-    template<typename T, typename... Params>
-    void Print(std::ostream& stream, T&& first, Params&&... values)
-    {
-        stream << " LOG-ERROR ";
-        //		stream << first;
-        //
-        //		Print(stream, values);
-    }
-
-	struct Handler
+    
+   
+  	struct Handler
 	{
 		std::ostream* Stream;
 		std::string Label;

@@ -17,6 +17,17 @@ T& SetUniform<T>(const std::string& name, const T& value)
 
 namespace Global
 {
+    enum class UniformType
+    {
+        Unknown
+        ,Matrix4
+        ,Float
+        ,Vector2
+        ,Vector3
+        ,Vector4
+        ,Int
+    };
+    
     
     template<typename T>
     T& SetUniform(const std::string& name, const T& value)
