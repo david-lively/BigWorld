@@ -136,7 +136,7 @@ int Global::ApplyAll()
     
     gl::GetIntegerv(gl::CURRENT_PROGRAM, &programId);
     
-    if (programId == 0)
+    if (programId <= 0)
     {
         Log::Error << "Global::Apply - No program is bound.\n";
         return 0;
@@ -160,9 +160,6 @@ int Global::ApplyAll()
             gl::UniformMatrix4fv(ptr->second, 1, false, p);
         }
     }
-    
-    
-    
     
     return -1;
     
