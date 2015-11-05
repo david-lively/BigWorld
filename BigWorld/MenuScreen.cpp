@@ -45,7 +45,11 @@ void MenuScreen::CreateScene()
     m_effect->Bind();
     
     Global::InitializeUniformMap(m_effect->Handle);
-
+    
+    Global::SetUniform<Matrix4>("World",Matrix4::Identity());
+    Global::SetUniform<Matrix4>("View",Matrix4::Identity());
+    Global::SetUniform<Matrix4>("Projection",Matrix4::Identity());
+    
 	mesh.SetData(vertices, indices);
 
 	check_gl_error();

@@ -149,14 +149,19 @@ int Global::ApplyAll()
             InitializeUniformMap(programId);
     }
     
-    
     auto& uniforms = m_uniformLocations[programId];
     
-    for(auto it = begin(uniforms); it != end(uniforms); ++it)
+    for(auto it = begin(m_uniformMatrix4); it != end(m_uniformMatrix4); ++it)
     {
-        
-        
+        auto ptr = uniforms.find(it->first);
+        if (ptr != end(uniforms))
+        {
+            GLfloat* p= (GLfloat*)&(it->second);
+            gl::UniformMatrix4fv(ptr->second, 1, false, p);
+        }
     }
+    
+    
     
     
     return -1;
