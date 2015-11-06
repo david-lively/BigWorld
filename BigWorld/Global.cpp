@@ -161,6 +161,17 @@ int Global::ApplyAll()
         }
     }
     
+    for(auto it = begin(m_uniformVector4); it != end(m_uniformVector4); ++it)
+    {
+        auto vecPtr = uniforms.find(it->first);
+        if (vecPtr != end(uniforms))
+        {
+            Vector4& vec = it->second;
+            gl::Uniform4fv(vecPtr->second, 1, (GLfloat*)&vec);
+        }
+        
+    }
+    
     return -1;
     
 }
