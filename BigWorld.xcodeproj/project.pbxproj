@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		986D41D11BE9169F00682E6F /* Global.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 986D41D01BE9169F00682E6F /* Global.cpp */; };
+		984BA56C1BED28F1003970E3 /* Global.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 984BA56A1BED28F1003970E3 /* Global.cpp */; };
 		9879D0961BDD3BAF00CE3005 /* VertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9879D0951BDD3BAF00CE3005 /* VertexArray.cpp */; };
 		987D6EA11BDC18F60006DE11 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 987D6EA01BDC18F60006DE11 /* main.cpp */; };
 		98FD37101BDC1A1400F770B8 /* BigWorldGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98FD36D41BDC1A1400F770B8 /* BigWorldGame.cpp */; };
@@ -54,9 +54,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		986D41D01BE9169F00682E6F /* Global.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Global.cpp; sourceTree = "<group>"; };
+		984BA56A1BED28F1003970E3 /* Global.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Global.cpp; sourceTree = "<group>"; };
+		984BA56B1BED28F1003970E3 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		9879D0951BDD3BAF00CE3005 /* VertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VertexArray.cpp; sourceTree = "<group>"; };
-		9879D0971BDD713200CE3005 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		987D6E9D1BDC18F60006DE11 /* BigWorld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BigWorld; sourceTree = BUILT_PRODUCTS_DIR; };
 		987D6EA01BDC18F60006DE11 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		98E070A61BE91184002AC31E /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
@@ -216,8 +216,6 @@
 				98FD36ED1BDC1A1400F770B8 /* GeometryProvider.h */,
 				98FD36EE1BDC1A1400F770B8 /* glError.cpp */,
 				98FD36EF1BDC1A1400F770B8 /* glError.h */,
-				986D41D01BE9169F00682E6F /* Global.cpp */,
-				9879D0971BDD713200CE3005 /* Global.h */,
 				98FD36F01BDC1A1400F770B8 /* Graphics.cpp */,
 				98FD36F11BDC1A1400F770B8 /* Graphics.h */,
 				98FD36F21BDC1A1400F770B8 /* Helper.h */,
@@ -253,6 +251,8 @@
 				98FD370D1BDC1A1400F770B8 /* VertexArray.h */,
 				98FD370E1BDC1A1400F770B8 /* Window.cpp */,
 				98FD370F1BDC1A1400F770B8 /* Window.h */,
+				984BA56A1BED28F1003970E3 /* Global.cpp */,
+				984BA56B1BED28F1003970E3 /* Global.h */,
 			);
 			path = BigWorld;
 			sourceTree = "<group>";
@@ -388,6 +388,7 @@
 				98FD37141BDC1A1400F770B8 /* Files.cpp in Sources */,
 				98FD371E1BDC1A1400F770B8 /* MenuScreen.cpp in Sources */,
 				98FD371B1BDC1A1400F770B8 /* Log.cpp in Sources */,
+				984BA56C1BED28F1003970E3 /* Global.cpp in Sources */,
 				98FD37481BDC1A2A00F770B8 /* etc1_utils.c in Sources */,
 				98FD371A1BDC1A1400F770B8 /* Identity.cpp in Sources */,
 				9879D0961BDD3BAF00CE3005 /* VertexArray.cpp in Sources */,
@@ -396,7 +397,6 @@
 				98FD37191BDC1A1400F770B8 /* Graphics.cpp in Sources */,
 				98FD37491BDC1A2A00F770B8 /* image_DXT.c in Sources */,
 				98FD37111BDC1A1400F770B8 /* CommandList.cpp in Sources */,
-				986D41D11BE9169F00682E6F /* Global.cpp in Sources */,
 				98FD371F1BDC1A1400F770B8 /* Mesh.cpp in Sources */,
 				98FD37221BDC1A1400F770B8 /* Transform.cpp in Sources */,
 				987D6EA11BDC18F60006DE11 /* main.cpp in Sources */,

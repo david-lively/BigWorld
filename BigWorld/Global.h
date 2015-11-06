@@ -1,5 +1,5 @@
-#ifndef GLOBALSTATE_H
-#define GLOBALSTATE_H
+#ifndef GLOBAL_H
+#define GLOBAL_H
 
 #include <typeinfo>
 #include <string>
