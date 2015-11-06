@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F1F5153F-5BDA-4794-BD23-7B9EB97DA7F0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BigWorld</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>74373507BF2D7A3E8B515F78F9A7371E3B65A0E2</key>
+		<string>https://github.com/david-lively/BigWorld.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BigWorld.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>74373507BF2D7A3E8B515F78F9A7371E3B65A0E2</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/david-lively/BigWorld.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>74373507BF2D7A3E8B515F78F9A7371E3B65A0E2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>74373507BF2D7A3E8B515F78F9A7371E3B65A0E2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BigWorld</string>
+		</dict>
+	</array>
+</dict>
+</plist>
