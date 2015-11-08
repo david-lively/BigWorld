@@ -109,7 +109,17 @@ inline void BindVertexAttributes<VertexPositionColor>()
     gl::VertexAttribPointer(1, 4, gl::FLOAT, false, (GLsizei)stride, nullptr);
 }
 
+struct VertexChar
+{
+    char Char;
+};
 
+template<>
+inline void BindVertexAttributes<char>()
+{
+    auto stride = sizeof(char);
+    gl::VertexAttribPointer(0, 1, gl::BYTE, false,(GLsizei)stride, nullptr);
+}
 
 
 #endif

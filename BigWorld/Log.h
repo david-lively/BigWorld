@@ -48,6 +48,7 @@ namespace Log
 			return *Stream;
 		};
         
+        /// int override so we can check input stream for flags.
         std::ostream& operator<<(const int& value)
         {
             if (value != NoHeader)

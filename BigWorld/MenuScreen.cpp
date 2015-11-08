@@ -5,6 +5,7 @@
 #include "GeometryProvider.h"
 #include "Mesh.h"
 #include "Effect.h"
+#include "Console.h"
 
 #include <vector>
 
@@ -53,5 +54,8 @@ void MenuScreen::CreateScene()
 	mesh.SetData(vertices, indices);
 
 	check_gl_error();
+    
+    auto& console = Create<Console>("menuscreen.console");
+    
 
 }

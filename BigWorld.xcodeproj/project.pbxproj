@@ -216,6 +216,8 @@
 				98FD36ED1BDC1A1400F770B8 /* GeometryProvider.h */,
 				98FD36EE1BDC1A1400F770B8 /* glError.cpp */,
 				98FD36EF1BDC1A1400F770B8 /* glError.h */,
+				984BA56A1BED28F1003970E3 /* Global.cpp */,
+				984BA56B1BED28F1003970E3 /* Global.h */,
 				98FD36F01BDC1A1400F770B8 /* Graphics.cpp */,
 				98FD36F11BDC1A1400F770B8 /* Graphics.h */,
 				98FD36F21BDC1A1400F770B8 /* Helper.h */,
@@ -251,8 +253,6 @@
 				98FD370D1BDC1A1400F770B8 /* VertexArray.h */,
 				98FD370E1BDC1A1400F770B8 /* Window.cpp */,
 				98FD370F1BDC1A1400F770B8 /* Window.h */,
-				984BA56A1BED28F1003970E3 /* Global.cpp */,
-				984BA56B1BED28F1003970E3 /* Global.h */,
 			);
 			path = BigWorld;
 			sourceTree = "<group>";
