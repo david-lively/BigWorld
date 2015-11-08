@@ -56,6 +56,9 @@
 /* Begin PBXFileReference section */
 		984BA56A1BED28F1003970E3 /* Global.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Global.cpp; sourceTree = "<group>"; };
 		984BA56B1BED28F1003970E3 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		9861DDF91BEEE21E008D8A4E /* text.vert.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.vert.glsl; sourceTree = "<group>"; };
+		9861DDFA1BEEE24A008D8A4E /* text.geom.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.geom.glsl; sourceTree = "<group>"; };
+		9861DDFC1BEEE294008D8A4E /* text.frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.frag.glsl; sourceTree = "<group>"; };
 		9879D0951BDD3BAF00CE3005 /* VertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VertexArray.cpp; sourceTree = "<group>"; };
 		987D6E9D1BDC18F60006DE11 /* BigWorld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BigWorld; sourceTree = BUILT_PRODUCTS_DIR; };
 		987D6EA01BDC18F60006DE11 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -253,6 +256,9 @@
 				98FD370D1BDC1A1400F770B8 /* VertexArray.h */,
 				98FD370E1BDC1A1400F770B8 /* Window.cpp */,
 				98FD370F1BDC1A1400F770B8 /* Window.h */,
+				9861DDF91BEEE21E008D8A4E /* text.vert.glsl */,
+				9861DDFA1BEEE24A008D8A4E /* text.geom.glsl */,
+				9861DDFC1BEEE294008D8A4E /* text.frag.glsl */,
 			);
 			path = BigWorld;
 			sourceTree = "<group>";

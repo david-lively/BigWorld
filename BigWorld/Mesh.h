@@ -40,9 +40,13 @@ public:
 
 	void OnRender(const GameTime& time) override
 	{
+        check_gl_error();
+        
 		Bind();
 
-		if (m_indexBuffer.Count() > 0)
+        check_gl_error();
+
+        if (m_indexBuffer.Count() > 0)
 			gl::DrawElements((GLenum)Type, (GLsizei)m_indexBuffer.Count(), (GLenum)ElementType::UnsignedInt, 0);
 		else
             gl::DrawArrays((GLenum)Type, 0, (GLsizei)m_vertexArray.VertexBuffer().Count());

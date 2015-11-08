@@ -3,6 +3,7 @@
 
 #include "Common.h"
 #include "GameObject.h"
+#include "Mesh.h"
 #include "VertexArray.h"
 #include "Effect.h"
 
@@ -61,7 +62,7 @@ private:
     std::vector<std::string> m_strings;
     
     Effect* m_consoleEffect = nullptr;
-    VertexArray<char> m_vertexArray;
+    Mesh<char,int> m_mesh;
     
     
 };
