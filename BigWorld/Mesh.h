@@ -40,6 +40,7 @@ public:
 
 	void OnRender(const GameTime& time) override
 	{
+        Log::Info << "Drawing \"" << Name() << "\"\n";
         check_gl_error();
         
 		Bind();
@@ -52,29 +53,6 @@ public:
             gl::DrawArrays((GLenum)Type, 0, (GLsizei)m_vertexArray.VertexBuffer().Count());
 
 		check_gl_error();
-
-
-		//int primitiveCount = 0;
-
-		//switch (Type)
-		//{
-		//case BeginMode::Lines:
-		//	primitiveCount = Count() / 2;
-		//	break;
-
-		//case BeginMode::Triangles:
-		//	primitiveCount = Count() / 3;
-		//	break;
-
-		//case BeginMode::TriangleStrip:
-		//	primitiveCount = (Count() - 2);
-		//	break;
-		//default:
-		//	Log::Info() << "Unsupported primitive type\n";
-		//	Log::Error();
-		//	break;
-		//}
-
 	}
 
 	void Bind() override
@@ -88,8 +66,6 @@ public:
 		m_indexBuffer.Bind();
 		
 		check_gl_error();
-
-//		Log::Info << "Bind MESH \"" << Name() << "\"\n";
 
 	}
 

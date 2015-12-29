@@ -2,6 +2,7 @@
 uniform mat4 World;
 uniform mat4 View;
 uniform mat4 Projection;
+uniform float GameTimeTotalSeconds;
 
 in vec3 Position;
 in vec4 Color;

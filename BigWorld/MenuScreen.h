@@ -22,7 +22,7 @@ public:
 
 	void OnLoad() override;
 //	void OnInitialize() override;
-//	void OnRender(const GameTime& time) override;
+	void OnRender(const GameTime& time) override;
 
 	void CreateScene();
 

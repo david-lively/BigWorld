@@ -5,6 +5,7 @@
 #include "GeometryProvider.h"
 #include "Mesh.h"
 #include "Effect.h"
+#include "GameTime.h"
 #include "Console.h"
 
 #include <vector>
@@ -42,20 +43,27 @@ void MenuScreen::CreateScene()
 
     m_effect = &quad.Create<Effect>("primitive");
     m_effect->Rebuild();
-    
     m_effect->Bind();
     
     Global::InitializeUniformMap(m_effect->Handle);
     
-    Global::SetUniform<Matrix4>("World",Matrix4::Identity());
-    Global::SetUniform<Matrix4>("View",Matrix4::Identity());
-    Global::SetUniform<Matrix4>("Projection",Matrix4::Identity());
+    Global::SetUniform("World",Matrix4::Identity());
+    Global::SetUniform("View",Matrix4::Identity());
+    Global::SetUniform("Projection",Matrix4::Identity());
     
 	mesh.SetData(vertices, indices);
 
 	check_gl_error();
     
-    auto& console = Create<Console>("menuscreen.console");
-    
+    auto& console = Create<Console>("console");
+//    console << "Hello world!";
 
 }
+
+void MenuScreen::OnRender(const GameTime& time)
+{
+    Global::SetUniform("GameTimeTotalSeconds",time.TotalSeconds());
+    
+    GameObject::OnRender(time);
+}
+

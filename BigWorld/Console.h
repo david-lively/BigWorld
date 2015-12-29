@@ -7,6 +7,8 @@
 #include "VertexArray.h"
 #include "Effect.h"
 
+#include "SOIL2.h"
+
 #include <sstream>
 #include <vector>
 #include <string>
@@ -14,6 +16,9 @@
 class Console : public GameObject
 {
 public:
+    /// number of lines to display in the console. Should adjust this dynamically based on display size, but whatever.
+    int LinesToDisplay = 5;
+    
     Console(const std::string& name) : GameObject(name)
     {
         
@@ -30,6 +35,15 @@ public:
         
     }
     
+//    template<typename T>
+//    std::ostream& operator<<(const T& value)
+//    {
+//        m_stream << value;
+//        
+//        return m_stream;
+//    };
+ 
+    
     template<typename T>
     Console& operator<<(const T& value)
     {
@@ -38,7 +52,6 @@ public:
         if (value == std::endl)
         {
             /// temp debugging throw
-            throw;
             m_strings.push_back(m_stream.str());
             m_stream.clear();
         }
@@ -52,6 +65,8 @@ public:
         m_stream.clear();
         m_strings.clear();
     }
+    
+
     
     void OnLoad() override;
     

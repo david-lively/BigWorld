@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		984BA56C1BED28F1003970E3 /* Global.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 984BA56A1BED28F1003970E3 /* Global.cpp */; };
+		986EB79B1BFAC2AA00AF740C /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 986EB79A1BFAC2AA00AF740C /* Console.cpp */; };
 		9879D0961BDD3BAF00CE3005 /* VertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9879D0951BDD3BAF00CE3005 /* VertexArray.cpp */; };
 		987D6EA11BDC18F60006DE11 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 987D6EA01BDC18F60006DE11 /* main.cpp */; };
 		98FD37101BDC1A1400F770B8 /* BigWorldGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98FD36D41BDC1A1400F770B8 /* BigWorldGame.cpp */; };
 		98FD37111BDC1A1400F770B8 /* CommandList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98FD36D81BDC1A1400F770B8 /* CommandList.cpp */; };
-		98FD37121BDC1A1400F770B8 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98FD36DB1BDC1A1400F770B8 /* Console.cpp */; };
 		98FD37131BDC1A1400F770B8 /* Effect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98FD36E01BDC1A1400F770B8 /* Effect.cpp */; };
 		98FD37141BDC1A1400F770B8 /* Files.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98FD36E31BDC1A1400F770B8 /* Files.cpp */; };
 		98FD37151BDC1A1400F770B8 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98FD36E51BDC1A1400F770B8 /* Game.cpp */; };
@@ -59,6 +59,7 @@
 		9861DDF91BEEE21E008D8A4E /* text.vert.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.vert.glsl; sourceTree = "<group>"; };
 		9861DDFA1BEEE24A008D8A4E /* text.geom.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.geom.glsl; sourceTree = "<group>"; };
 		9861DDFC1BEEE294008D8A4E /* text.frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.frag.glsl; sourceTree = "<group>"; };
+		986EB79A1BFAC2AA00AF740C /* Console.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Console.cpp; sourceTree = "<group>"; };
 		9879D0951BDD3BAF00CE3005 /* VertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VertexArray.cpp; sourceTree = "<group>"; };
 		987D6E9D1BDC18F60006DE11 /* BigWorld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BigWorld; sourceTree = BUILT_PRODUCTS_DIR; };
 		987D6EA01BDC18F60006DE11 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -70,7 +71,6 @@
 		98FD36D81BDC1A1400F770B8 /* CommandList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CommandList.cpp; sourceTree = "<group>"; };
 		98FD36D91BDC1A1400F770B8 /* CommandList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandList.h; sourceTree = "<group>"; };
 		98FD36DA1BDC1A1400F770B8 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		98FD36DB1BDC1A1400F770B8 /* Console.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Console.cpp; sourceTree = "<group>"; };
 		98FD36DC1BDC1A1400F770B8 /* Console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Console.h; sourceTree = "<group>"; };
 		98FD36DD1BDC1A1400F770B8 /* DebugPrimitive.frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DebugPrimitive.frag.glsl; sourceTree = "<group>"; };
 		98FD36DE1BDC1A1400F770B8 /* DebugPrimitive.geom.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DebugPrimitive.geom.glsl; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 				98FD36D81BDC1A1400F770B8 /* CommandList.cpp */,
 				98FD36D91BDC1A1400F770B8 /* CommandList.h */,
 				98FD36DA1BDC1A1400F770B8 /* Common.h */,
-				98FD36DB1BDC1A1400F770B8 /* Console.cpp */,
+				986EB79A1BFAC2AA00AF740C /* Console.cpp */,
 				98FD36DC1BDC1A1400F770B8 /* Console.h */,
 				98FD36DD1BDC1A1400F770B8 /* DebugPrimitive.frag.glsl */,
 				98FD36DE1BDC1A1400F770B8 /* DebugPrimitive.geom.glsl */,
@@ -248,6 +248,9 @@
 				98FD37061BDC1A1400F770B8 /* Settings.h */,
 				98FD37071BDC1A1400F770B8 /* Shader.cpp */,
 				98FD37081BDC1A1400F770B8 /* Shader.h */,
+				9861DDFC1BEEE294008D8A4E /* text.frag.glsl */,
+				9861DDFA1BEEE24A008D8A4E /* text.geom.glsl */,
+				9861DDF91BEEE21E008D8A4E /* text.vert.glsl */,
 				98FD37091BDC1A1400F770B8 /* Transform.cpp */,
 				98FD370A1BDC1A1400F770B8 /* Transform.h */,
 				98FD370B1BDC1A1400F770B8 /* Vectors.h */,
@@ -256,9 +259,6 @@
 				98FD370D1BDC1A1400F770B8 /* VertexArray.h */,
 				98FD370E1BDC1A1400F770B8 /* Window.cpp */,
 				98FD370F1BDC1A1400F770B8 /* Window.h */,
-				9861DDF91BEEE21E008D8A4E /* text.vert.glsl */,
-				9861DDFA1BEEE24A008D8A4E /* text.geom.glsl */,
-				9861DDFC1BEEE294008D8A4E /* text.frag.glsl */,
 			);
 			path = BigWorld;
 			sourceTree = "<group>";
@@ -410,12 +410,12 @@
 				98FD37181BDC1A1400F770B8 /* glError.cpp in Sources */,
 				98FD37101BDC1A1400F770B8 /* BigWorldGame.cpp in Sources */,
 				98FD374D1BDC1A2A00F770B8 /* stb_image_write.c in Sources */,
-				98FD37121BDC1A1400F770B8 /* Console.cpp in Sources */,
 				98FD37151BDC1A1400F770B8 /* Game.cpp in Sources */,
 				98FD37171BDC1A1400F770B8 /* GameTime.cpp in Sources */,
 				98FD37211BDC1A1400F770B8 /* Shader.cpp in Sources */,
 				98FD374E1BDC1A2A00F770B8 /* gl_core_4_3.cpp in Sources */,
 				98FD374B1BDC1A2A00F770B8 /* SOIL2.c in Sources */,
+				986EB79B1BFAC2AA00AF740C /* Console.cpp in Sources */,
 				98FD37201BDC1A1400F770B8 /* ResourceManager.cpp in Sources */,
 				98FD374C1BDC1A2A00F770B8 /* stb_image.c in Sources */,
 			);

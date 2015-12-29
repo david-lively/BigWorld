@@ -64,6 +64,15 @@ public:
 protected:
 	std::vector<GameObject*> ToDelete;
 
+    void DoPreRender(const GameTime& time);
+    void DoRender(const GameTime& time);
+    void DoPostRender(const GameTime& time);
+    
+    void DoPreUpdate(const GameTime& time);
+    void DoUpdate(const GameTime& time);
+    void DoPostUpdate(const GameTime& time);
+    
+
 private:
 	void Load();
 	void Initialize();

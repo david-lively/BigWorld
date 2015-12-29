@@ -42,7 +42,7 @@ namespace Log
             {
                 *Stream << GetTimeStamp() << Label << " ";
             }
-
+            
             *Stream << value;
 
 			return *Stream;

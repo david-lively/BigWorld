@@ -8,6 +8,7 @@
 #include "Vectors.h"
 #include "Game.h"
 #include "Graphics.h"
+#include "Log.h"
 
 
 using namespace std;
@@ -62,11 +63,13 @@ void Window::OnPreUpdate(const GameTime& time)
 
 void Window::OnPreRender(const GameTime& time)
 {
+    Log::Info << "Window::OnPreRender\n";
 	check_gl_error();
 
 	Activate();
 
-	gl::ClearColor(ClearColor.x, ClearColor.y, ClearColor.z, ClearColor.w);
+    gl::ClearColor(1,0,1,1);
+//	gl::ClearColor(ClearColor.x, ClearColor.y, ClearColor.z, ClearColor.w);
 	gl::Clear(gl::COLOR_BUFFER_BIT | gl::DEPTH_BUFFER_BIT);
 
 	check_gl_error();
@@ -74,6 +77,7 @@ void Window::OnPreRender(const GameTime& time)
 
 void Window::OnPostRender(const GameTime& time)
 {
+    Log::Info << "Window::OnPostRender - glfwSwapBuffers\n";
 	glfwSwapBuffers(m_window);
 
 	check_gl_error();

@@ -32,7 +32,10 @@ public:
 	T& Create(const std::string& name)
 	{
 		if (m_resources.find(name) != end(m_resources))
+        {
 			Log::Error << "Can't create duplicate resource named \"" << name << "\"\n";
+            throw;
+        }
 
 		auto item = std::make_shared<T>(name);
 

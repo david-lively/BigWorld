@@ -30,63 +30,100 @@ void GameObject::DoPendingOperations()
 	ToDelete.clear();
 }
 
+void GameObject::DoPreUpdate(const GameTime& time)
+{
+    OnPreUpdate(time);
+    
+    for (auto it = begin(Children); it != end(Children); ++it)
+    {
+        if (nullptr != *it)
+            (*it)->DoPreUpdate(time);
+    }
+    
+}
+
+void GameObject::DoUpdate(const GameTime& time)
+{
+    OnUpdate(time);
+    
+    for (auto it = begin(Children); it != end(Children); ++it)
+    {
+        if (nullptr != *it)
+            (*it)->DoUpdate(time);
+    }
+    
+}
+
+void GameObject::DoPostUpdate(const GameTime& time)
+{
+    
+    for (auto it = begin(Children); it != end(Children); ++it)
+    {
+        if (nullptr != *it)
+            (*it)->DoPostUpdate(time);
+    }
+
+    OnPostUpdate(time);
+    
+}
+
+void GameObject::DoPreRender(const GameTime& time)
+{
+    OnPreRender(time);
+    
+    for (auto it = begin(Children); it != end(Children); ++it)
+    {
+        if (nullptr != *it)
+            (*it)->DoPreRender(time);
+    }
+    
+}
+
+void GameObject::DoRender(const GameTime& time)
+{
+    OnRender(time);
+    
+    for (auto it = begin(Children); it != end(Children); ++it)
+    {
+        if (nullptr != *it)
+            (*it)->DoRender(time);
+    }
+    
+}
+
+void GameObject::DoPostRender(const GameTime& time)
+{
+    
+    for (auto it = begin(Children); it != end(Children); ++it)
+    {
+        if (nullptr != *it)
+            (*it)->DoPostRender(time);
+    }
+
+    OnPostRender(time);
+    
+}
+
+
+
+
 void GameObject::Update(const GameTime& time)
 {
 	DoPendingOperations();
-
-	OnPreUpdate(time);
-
-	for (auto it = begin(Children); it != end(Children); ++it)
-	{
-		if (nullptr != *it)
-			(*it)->OnPreUpdate(time);
-	}
-
-	OnUpdate(time);
-
-	for (auto it = begin(Children); it != end(Children); ++it)
-	{
-		if (nullptr != *it)
-			(*it)->Update(time);
-	}
-
-	OnPostUpdate(time);
-
-	for (auto it = begin(Children); it != end(Children); ++it)
-	{
-		if (nullptr != *it)
-			(*it)->OnPostUpdate(time);
-	}
-
+    
+    DoPreUpdate(time);
+    DoUpdate(time);
+    DoPostUpdate(time);
 }
 
 void GameObject::Render(const GameTime& time)
 {
-	OnPreRender(time);
-
-	for (auto it = begin(Children); it != end(Children); ++it)
-	{
-		if (nullptr != *it)
-			(*it)->OnPreRender(time);
-	}
-
-
-	OnRender(time);
-
-	for (auto it = begin(Children); it != end(Children); ++it)
-	{
-		if (nullptr != *it)
-			(*it)->Render(time);
-	}
-
-	OnPostRender(time);
-
-	for (auto it = begin(Children); it != end(Children); ++it)
-	{
-		if (nullptr != *it)
-			(*it)->OnPostRender(time);
-	}
-
+ 
+    Log::Info << "GameObject::Render \"" << Name() << "\"\n";
+    
+    DoPreRender(time);
+    DoRender(time);
+    DoPostRender(time);
 }
 
 void GameObject::Delete(GameObject* item)

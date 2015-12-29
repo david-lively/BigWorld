@@ -172,6 +172,16 @@ int Global::ApplyAll()
         
     }
     
+    for(auto it = begin(m_uniformint); it != end(m_uniformint); ++it)
+    {
+        auto intPtr = uniforms.find(it->first);
+        if (intPtr != end(uniforms))
+        {
+            int value = it->second;
+            gl::Uniform1i(intPtr->second, value);
+        }
+    }
+    
     return -1;
     
 }
