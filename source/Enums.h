@@ -1,7 +1,7 @@
 #ifndef ENUMS_H
 #define ENUMS_H
 
-#include "gl_core_4_3.hpp"
+#include "gl_core_4_5.hpp"
 
 enum class BufferTarget {
 	Unknown = 0

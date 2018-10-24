@@ -75,8 +75,7 @@ void Window::OnPreRender(const GameTime& time)
 
 	Activate();
 
-    gl::ClearColor(1,0,1,1);
-//	gl::ClearColor(ClearColor.x, ClearColor.y, ClearColor.z, ClearColor.w);
+	gl::ClearColor(ClearColor.x, ClearColor.y, ClearColor.z, ClearColor.w);
 	gl::Clear(gl::COLOR_BUFFER_BIT | gl::DEPTH_BUFFER_BIT);
 
 	check_gl_error();

@@ -16,7 +16,7 @@
 #include <iostream>
 #include <iomanip>
 
-#include "gl_core_4_3.hpp"
+#include "gl_core_4_5.hpp"
 #include "glfw3.h"
 
 #pragma region adds pragma WARNING(text...) message to emit a warning to the VS error list window

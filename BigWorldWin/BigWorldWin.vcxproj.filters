@@ -93,6 +93,9 @@
     <ClCompile Include="..\ThirdParty\src\gl_core_4_3.cpp">
       <Filter>ThirdParty</Filter>
     </ClCompile>
+    <ClCompile Include="..\ThirdParty\src\gl_core_4_5.cpp">
+      <Filter>ThirdParty</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\source\Log.h">

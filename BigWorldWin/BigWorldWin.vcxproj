@@ -105,7 +105,7 @@
     <ClCompile Include="..\source\Transform.cpp" />
     <ClCompile Include="..\source\VertexArray.cpp" />
     <ClCompile Include="..\source\Window.cpp" />
-    <ClCompile Include="..\ThirdParty\src\gl_core_4_3.cpp" />
+    <ClCompile Include="..\ThirdParty\src\gl_core_4_5.cpp" />
     <ClCompile Include="mainstub.cpp" />
   </ItemGroup>
   <ItemGroup>

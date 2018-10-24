@@ -4,7 +4,7 @@
 #include "GLError.h"
 #include <iostream>
 #include <string>
-#include "gl_core_4_3.hpp"
+#include "gl_core_4_5.hpp"
 
 #include "Log.h"
 
