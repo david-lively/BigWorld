@@ -1,5 +1,4 @@
-#ifndef EFFECT_H
-#define EFFECT_H
+#pragma once
 
 #include <string>
 #include <map>
@@ -73,4 +72,3 @@ private:
 
 };
 
-#endif

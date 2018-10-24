@@ -39,6 +39,8 @@
 
 #include <iostream>
 
+void glfwError(int, const char*);
+
 class GameTime;
 /// <summary>
 /// identifier type for all managed resources.

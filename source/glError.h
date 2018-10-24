@@ -1,5 +1,4 @@
-#ifndef GLERROR_H
-#define GLERROR_H
+#pragma once
 
 void m_check_gl_error(const char *file, int line);
 
@@ -10,4 +9,3 @@ void m_check_gl_error(const char *file, int line);
 ///
 #define check_gl_error() m_check_gl_error(__FILE__,__LINE__)
 
-#endif // GLERROR_H

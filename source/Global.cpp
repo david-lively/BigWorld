@@ -8,6 +8,7 @@ using namespace std;
 #include "Vectors.h"
 
 #include "Global.h"
+#include "glError.h"
 
 using namespace Global;
 
@@ -55,8 +56,10 @@ void Global::InitializeUniformMap(GLuint program)
     
     check_gl_error();
     
-    char nameBuffer[maxNameLength + 1];
-    
+    //char nameBuffer[maxNameLength + 1];
+	GLchar* nameBuffer = new GLchar[maxNameLength + 1];
+	memset(nameBuffer, 0, maxNameLength + 1);
+
     GLint uniformCount = 0;
     
     gl::GetProgramiv(program, gl::ACTIVE_UNIFORMS, &uniformCount);
@@ -67,8 +70,9 @@ void Global::InitializeUniformMap(GLuint program)
     {
         GLenum type;
         GLsizei nameLength = 0;
+		GLint uniformSize;
         
-        gl::GetActiveUniform(program, i, maxNameLength, &nameLength, nullptr, &type, nameBuffer);
+        gl::GetActiveUniform(program, i, maxNameLength, &nameLength, &uniformSize, &type, nameBuffer);
         
         check_gl_error();
         
@@ -86,6 +90,8 @@ void Global::InitializeUniformMap(GLuint program)
         
         Log::Info << "Found shader uniform " << location << " \"" << nameBuffer << "\"\n";
     }
+
+	delete nameBuffer;
     
     check_gl_error();
     

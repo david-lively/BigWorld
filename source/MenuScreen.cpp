@@ -55,7 +55,7 @@ void MenuScreen::CreateScene()
 
 	check_gl_error();
     
-    auto& console = Create<Console>("console");
+    //auto& console = Create<Console>("console.global");
 //    console << "Hello world!";
 
 }

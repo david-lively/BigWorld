@@ -1,11 +1,9 @@
-#ifndef GRAPHICS_H
-#define GRAPHICS_H
+#pragma once
 
 #include <string>
 
 #include "Helper.h"
 #include "Window.h"
-
 
 class Graphics : public Helper
 {
@@ -34,5 +32,4 @@ private:
 
 };
 
-#endif
 

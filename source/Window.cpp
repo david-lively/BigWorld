@@ -15,6 +15,11 @@ using namespace std;
 
 map<GLFWwindow*, Window*> allWindows;
 
+void glfwErrorCallback(int len, const char* message)
+{
+	Log::Error << "GLFW:" << message << endl;
+}
+
 /// GLFW callbacks
 void glfwWindowCloseCallback(GLFWwindow* window)
 {
@@ -22,6 +27,8 @@ void glfwWindowCloseCallback(GLFWwindow* window)
 		return;
 
 	auto it = allWindows.find(window);
+
+	//glfwDestroyWindow(window);
 
 	if (end(allWindows) != it)
 		Game::Instance->Delete(it->second);
@@ -48,8 +55,8 @@ Window::Window(const string& title, int width, int height) : GameObject(title)
 
 Window::~Window()
 {
-	if (nullptr != m_window)
-		glfwDestroyWindow(m_window);
+	//if (nullptr != m_window)
+	//	glfwDestroyWindow(m_window);
 
 	if (nullptr != m_graphics)
 		delete m_graphics;
@@ -77,7 +84,7 @@ void Window::OnPreRender(const GameTime& time)
 
 void Window::OnPostRender(const GameTime& time)
 {
-    Log::Info << "Window::OnPostRender - glfwSwapBuffers\n";
+	Log::Info << "Window::OnPostRender - glfwSwapBuffers\n";
 	glfwSwapBuffers(m_window);
 
 	check_gl_error();
@@ -119,6 +126,7 @@ void Window::Initialize(const string& title, int width, int height)
 	}
 
 	glfwMakeContextCurrent(m_window);
+	glfwSetErrorCallback(glfwErrorCallback);
 
 	if (!gl::sys::LoadFunctions())
 	{
