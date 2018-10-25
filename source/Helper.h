@@ -1,5 +1,4 @@
-#ifndef HELPER_H
-#define HELPER_H
+#pragma once
 
 #include "Common.h"
 #include "Identity.h"
@@ -39,4 +38,3 @@ private:
 };
 
 
-#endif
